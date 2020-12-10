@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Unit converter</string>
+    <string name="title">Temperature Conveter</string>
+    <string name="btnText">Convert</string>
+    <string name="celsiusText">To Celsius</string>
+    <string name="fahrenheitText">To Fahrenheit</string>
+    <string name="kelvinText">To Kelvin</string>
+</resources>

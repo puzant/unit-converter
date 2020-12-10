@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:layout_marginTop="20dp"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/tempicon"
+        android:id="@+id/tempIcon"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tempIcon"
+        android:text="@string/title"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="20dp"
+        android:id="@+id/tempConverterTxt"
+        android:layout_marginTop="14dp"
+        />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Value"
+        android:id="@+id/editTempValue"
+        android:layout_below="@+id/tempConverterTxt"
+        android:inputType="numberDecimal"
+        />
+
+    <RadioGroup
+        android:id="@+id/tempOpts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTempValue"
+        >
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/celsiusText"
+            android:id="@+id/celsiusOpt"
+            android:onClick="onOptionSelect"
+            />
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/fahrenheitText"
+            android:id="@+id/fahrenheitOpt"
+            android:onClick="onOptionSelect"
+            />
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/kelvinText"
+            android:id="@+id/kelvinOpt"
+            android:onClick="onOptionSelect"
+            />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/convertBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tempOpts"
+        android:onClick="convertTemp"
+        android:text="@string/btnText"
+        app:backgroundTint="#3D4EC3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/convertBtn"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/valueTxt"/>
+
+</RelativeLayout>
